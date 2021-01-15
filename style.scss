@@ -1,11 +1,56 @@
 $font-stack: Helvetica, sans-serif;
-$primary-color: #333;
+$text-1: #333;
 
 body {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 	font: 100% $font-stack;
-	color: $primary-color;
+	color: $text-1;
 }
 
 p {
 	color: red;
+}
+
+#drum-machine {
+	display: flex;
+	justify-content: center;
+}
+
+.drum-pad-container {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	max-width: 20rem;
+
+	.drum-pad {
+		position: relative;
+		width: 2rem;
+		margin: 0.2rem;
+		padding: 1.5rem 2rem;
+		border-radius: 1rem;
+		background: grey;
+		text-align: center;
+		font-size: 2rem;
+		transition: transform 0.15s ease-out, border 0.15s ease-in-out;
+
+		&:hover,
+		&:active,
+		&:focus {
+			cursor: pointer;
+			transform: scale(1.05);
+			border: 3px solid red;
+		}
+	}
+	.clip {
+		position: absolute;
+		display: block;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		width: 100%;
+		height: 100%;
+	}
 }
