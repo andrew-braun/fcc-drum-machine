@@ -1,28 +1,26 @@
 const drumpadClips = document.querySelectorAll(".clip");
 
+const drumpadClipsArr = Array.from(drumpadClips);
+
 if (window.location.href.includes("codepen")) {
 	console.log("codepen!");
 }
 
-const drums = {
-	snare1: {
-		name: "snare-1",
-		key: "A",
-		url: "/assets/drumpad-sounds/snare-1.wav",
-	},
-};
-
 function playAudio(clip) {
+	clip.currentTime = 0;
+	clip.pause();
 	clip.play();
 }
 
 function handleDrumpadEvent(event) {
-	console.log(event.target);
 	playAudio(event.target);
 }
 
 function handleKeyPress(event) {
-	console.log(event);
+	const clip = drumpadClipsArr.find(
+		(item) => item.id === event.key.toUpperCase()
+	);
+	clip ? playAudio(clip) : null;
 }
 // Add event listener to each drumpad button
 for (element of drumpadClips) {
