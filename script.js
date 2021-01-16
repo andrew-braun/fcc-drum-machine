@@ -1,6 +1,8 @@
-const drumpadClips = document.querySelectorAll(".clip");
+const drumpadButtons = document.querySelectorAll(".drum-pad");
+const drumpadKeys = document.querySelectorAll(".clip");
 
-const drumpadClipsArr = Array.from(drumpadClips);
+const drumpadButtonsArr = Array.from(drumpadButtons);
+const drumpadKeysArr = Array.from(drumpadKeys);
 
 if (window.location.href.includes("codepen")) {
 	console.log("codepen!");
@@ -13,20 +15,21 @@ function playAudio(clip) {
 }
 
 function handleDrumpadEvent(event) {
-	playAudio(event.target);
+	const audio = event.target.querySelector("audio");
+	playAudio(audio);
 }
 
 function handleKeyPress(event) {
-	const clip = drumpadClipsArr.find(
+	const clip = drumpadKeysArr.find(
 		(item) => item.id === event.key.toUpperCase()
 	);
 	clip ? playAudio(clip) : null;
 }
 // Add event listener to each drumpad button
-for (element of drumpadClips) {
+for (element of drumpadButtonsArr) {
 	element.addEventListener("click", handleDrumpadEvent);
 }
 
-console.log(drumpadClips);
+console.log(drumpadButtonsArr);
 
 window.addEventListener("keydown", handleKeyPress);
