@@ -12,7 +12,13 @@ p {
 
 #drum-machine {
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
+}
+#drum-machine #display {
+  padding: 1rem;
+  font-size: 1.5rem;
 }
 
 .drum-pad-container {
