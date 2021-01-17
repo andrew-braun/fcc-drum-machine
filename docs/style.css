@@ -44,10 +44,6 @@ p {
   transform: scale(1.08);
   border: 3px solid red;
 }
-.drum-pad-container .drum-pad:active {
-  transform: scale(0.92);
-  border: 3px solid red;
-}
 .drum-pad-container .clip {
   position: absolute;
   display: block;
@@ -81,10 +77,46 @@ p {
   border: 3px solid black;
   background: radial-gradient(circle at center, white 60%, black);
 }
+#low-snare:hover,
+#high-snare:hover {
+  border: 3px solid red;
+}
 
 #kick-drum,
 #bass-drum {
   border: 3px solid sienna;
   color: white;
   background: radial-gradient(circle at center, black 60%, white 75%);
+}
+#kick-drum:hover,
+#bass-drum:hover {
+  border: 3px solid red;
+}
+
+.active-drumhead {
+  transition: transform 0.15s ease-out, border 0.15s ease-in-out;
+  transform: scale(1.08);
+  border: 3px solid red;
+  transform: scale(0.92);
+  border: 3px solid red;
+}
+
+.active-drumhead {
+  animation: drumhead-animation 0.2s ease-in-out;
+}
+
+@keyframes drumhead-animation {
+  25% {
+    transform: scale(1.08);
+    border: 3px solid red;
+  }
+  50% {
+    transform: scale(1);
+  }
+  75% {
+    transform: scale(0.92);
+  }
+  100% {
+    transform: scale(1);
+  }
 }

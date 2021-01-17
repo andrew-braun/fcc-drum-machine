@@ -24,10 +24,16 @@ function renderDescription(id) {
 		.join(" ");
 }
 
+function animateDrumhead(target) {
+	target.classList.add("active-drumhead");
+	target.onanimationend = () => target.classList.remove("active-drumhead");
+}
+
 function handleDrumpadEvent(event) {
 	const audio = event.target.querySelector("audio");
 	playAudio(audio);
 	renderDescription(event.target.id);
+	animateDrumhead(event.target);
 }
 
 function handleKeyPress(event) {
@@ -37,6 +43,7 @@ function handleKeyPress(event) {
 	if (clip) {
 		playAudio(clip);
 		renderDescription(clip.parentElement.id);
+		animateDrumhead(clip.parentElement);
 	}
 }
 // Add event listener to each drumpad button
