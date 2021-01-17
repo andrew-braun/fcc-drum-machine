@@ -6,41 +6,47 @@
 		<title>Drum Machine</title>
 		<link rel="stylesheet" href="style.css" />
 		<link rel="shortcut icon" href="/favicon.ico" />
+		
 	</head>
 	<body>
 		<header class="main-header"><h1>Drum Machine</h1></header>
 		<main id="drum-machine">
-			<div class="drum-pad-container" id="display">
-				<div class="drum-pad" id="clip">Q
-					<audio src="./assets/drumpad-sounds/hi-hat-open.mp3" type="audio/mp3" class="clip" id="Q">
+			<div class="drum-pad-container">
+				<div class="drum-pad" id="open-hi-hat">Q
+					<audio src="./assets/drumpad-sounds/hi-hat-open.mp3" type="audio/mp3" class="clip" id="Q" preload="auto">
 				</div>
-				<div class="drum-pad" id="clip">W
-					<audio src="./assets/drumpad-sounds/crash.mp3" type="audio/mp3" class="clip" id="W"></audio>
+				<div class="drum-pad" id="crash-cymbal">W
+					<audio src="./assets/drumpad-sounds/crash.mp3" type="audio/mp3" class="clip" id="W" preload="auto"></audio>
 				</div>
-				<div class="drum-pad" id="clip">E
-					<audio src="./assets/drumpad-sounds/tom-high.wav" type="audio/wav" class="clip" id="E"></audio>
+				<div class="drum-pad" id="high-tom">E
+					<audio src="./assets/drumpad-sounds/tom-high.wav" type="audio/wav" class="clip" id="E" preload="auto"></audio>
 				</div>
-				<div class="drum-pad" id="clip">A
-					<audio src="./assets/drumpad-sounds/tom-medium.wav" type="audio/wav" class="clip" id="A"></audio>
+				<div class="drum-pad" id="medium-tom">A
+					<audio src="./assets/drumpad-sounds/tom-medium.wav" type="audio/wav" class="clip" id="A" preload="auto"></audio>
 				</div>
-				<div class="drum-pad" id="clip">S
-					<audio src="./assets/drumpad-sounds/tom-low.wav" type="audio/wav" class="clip" id="S"></audio>
+				<div class="drum-pad" id="low-tom">S
+					<audio src="./assets/drumpad-sounds/tom-low.wav" type="audio/wav" class="clip" id="S" preload="auto"></audio>
 				</div>
-				<div class="drum-pad" id="clip">D
-					<audio src="./assets/drumpad-sounds/snare-1.wav" type="audio/wav" class="clip" id="D"></audio>
+				<div class="drum-pad" id="high-snare">D
+					<audio src="./assets/drumpad-sounds/snare-1.wav" type="audio/wav" class="clip" id="D" preload="auto"></audio>
 				</div>
-				<div class="drum-pad" id="clip">Z
-					<audio src="./assets/drumpad-sounds/snare-2.wav" type="audio/wav" class="clip" id="Z"></audio>
+				<div class="drum-pad" id="low-snare">Z
+					<audio src="./assets/drumpad-sounds/snare-2.wav" type="audio/wav" class="clip" id="Z" preload="auto"></audio>
 				</div>
-				<div class="drum-pad" id="clip">X
-					<audio src="./assets/drumpad-sounds/kick.wav" type="audio/wav" class="clip" id="X"></audio>
+				<div class="drum-pad" id="kick-drum">X
+					<audio src="./assets/drumpad-sounds/kick.wav" type="audio/wav" class="clip" id="X" preload="auto" preload="auto"></audio>
 				</div>
-				<div class="drum-pad" id="clip">C
-					<audio src="./assets/drumpad-sounds/bass.wav" type="audio/wav" class="clip" id="C"></audio>
+				<div class="drum-pad" id="bass-drum">C
+					<audio src="./assets/drumpad-sounds/bass.wav" type="audio/wav" class="clip" id="C" preload="auto"></audio>
 				</div>
+			</div>
+			<div class="display-container">
+				<div class="display-text" id="display">
 
+				</div>
 			</div>
 		</main>
 		<script src="script.js"></script>
+
 	</body>
 </html>
