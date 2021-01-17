@@ -1,5 +1,6 @@
 $font-stack: Helvetica, sans-serif;
 $text-1: #333;
+$highlight-color: red;
 
 body {
 	display: flex;
@@ -10,7 +11,7 @@ body {
 }
 
 p {
-	color: red;
+	color: $highlight-color;
 }
 
 #drum-machine {
@@ -35,19 +36,23 @@ p {
 		position: relative;
 		width: 2rem;
 		margin: 0.2rem;
-		padding: 1.5rem 2rem;
-		border-radius: 1rem;
+		padding: 1.5rem 1.8rem;
+		border: 3px solid transparent;
+		border-radius: 50%;
 		background: grey;
 		text-align: center;
 		font-size: 2rem;
 		transition: transform 0.15s ease-out, border 0.15s ease-in-out;
 
 		&:hover,
-		&:active,
 		&:focus {
 			cursor: pointer;
-			transform: scale(1.05);
-			border: 3px solid red;
+			transform: scale(1.08);
+			border: 3px solid $highlight-color;
+		}
+		&:active {
+			transform: scale(0.92);
+			border: 3px solid $highlight-color;
 		}
 	}
 	.clip {
@@ -60,4 +65,37 @@ p {
 		width: 2rem;
 		height: 100%;
 	}
+}
+
+#open-hi-hat,
+#crash-cymbal {
+	background: radial-gradient(
+		circle at center,
+		hsla(51, 100%, 45%, 1) 40%,
+		white
+	);
+}
+
+#high-tom,
+#medium-tom,
+#low-tom {
+	border: 3px solid silver;
+	background: radial-gradient(circle at center, white 50%, silver);
+
+	&:hover {
+		border: 3px solid $highlight-color;
+	}
+}
+
+#low-snare,
+#high-snare {
+	border: 3px solid black;
+	background: radial-gradient(circle at center, white 60%, black);
+}
+
+#kick-drum,
+#bass-drum {
+	border: 3px solid sienna;
+	color: white;
+	background: radial-gradient(circle at center, black 60%, white 75%);
 }
