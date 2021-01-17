@@ -31,16 +31,21 @@ p {
   position: relative;
   width: 2rem;
   margin: 0.2rem;
-  padding: 1.5rem 2rem;
-  border-radius: 1rem;
+  padding: 1.5rem 1.8rem;
+  border: 3px solid transparent;
+  border-radius: 50%;
   background: grey;
   text-align: center;
   font-size: 2rem;
   transition: transform 0.15s ease-out, border 0.15s ease-in-out;
 }
-.drum-pad-container .drum-pad:hover, .drum-pad-container .drum-pad:active, .drum-pad-container .drum-pad:focus {
+.drum-pad-container .drum-pad:hover, .drum-pad-container .drum-pad:focus {
   cursor: pointer;
-  transform: scale(1.05);
+  transform: scale(1.08);
+  border: 3px solid red;
+}
+.drum-pad-container .drum-pad:active {
+  transform: scale(0.92);
   border: 3px solid red;
 }
 .drum-pad-container .clip {
@@ -52,4 +57,34 @@ p {
   right: 0;
   width: 2rem;
   height: 100%;
+}
+
+#open-hi-hat,
+#crash-cymbal {
+  background: radial-gradient(circle at center, #e6c300 40%, white);
+}
+
+#high-tom,
+#medium-tom,
+#low-tom {
+  border: 3px solid silver;
+  background: radial-gradient(circle at center, white 50%, silver);
+}
+#high-tom:hover,
+#medium-tom:hover,
+#low-tom:hover {
+  border: 3px solid red;
+}
+
+#low-snare,
+#high-snare {
+  border: 3px solid black;
+  background: radial-gradient(circle at center, white 60%, black);
+}
+
+#kick-drum,
+#bass-drum {
+  border: 3px solid sienna;
+  color: white;
+  background: radial-gradient(circle at center, black 60%, white 75%);
 }
