@@ -34,7 +34,14 @@ p {
   justify-content: center;
   align-items: center;
 }
-#drum-machine #display {
+#drum-machine .display-container {
+  width: 100%;
+  min-height: 4rem;
+  background: rgba(0, 0, 0, 0.8);
+  border-radius: 0 0 1rem 1rem;
+  text-align: center;
+}
+#drum-machine .display-container #display {
   padding: 1rem;
   font-size: 1.5rem;
   background: linear-gradient(90deg, rgba(255, 166, 0, 0.9), #ff00f2);
@@ -51,7 +58,7 @@ p {
   background-color: rgba(0, 0, 0, 0.2);
   background-image: radial-gradient(at bottom, rgba(255, 166, 0, 0.9) 25%, rgba(1, 98, 233, 0.8) 50%, transparent 80%);
   padding: 2rem;
-  border-radius: 1rem;
+  border-radius: 1rem 1rem 0 0;
 }
 .drum-pad-container .drum-pad {
   position: relative;

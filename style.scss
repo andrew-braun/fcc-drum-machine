@@ -47,13 +47,21 @@ p {
 	justify-content: center;
 	align-items: center;
 
-	#display {
-		padding: 1rem;
-		font-size: 1.5rem;
-		background: $text-gradient-1;
-		-webkit-background-clip: text;
-		color: transparent;
-		font-weight: bold;
+	.display-container {
+		width: 100%;
+		min-height: 4rem;
+		background: hsla(0, 0%, 0%, 0.8);
+		border-radius: 0 0 1rem 1rem;
+		text-align: center;
+
+		#display {
+			padding: 1rem;
+			font-size: 1.5rem;
+			background: $text-gradient-1;
+			-webkit-background-clip: text;
+			color: transparent;
+			font-weight: bold;
+		}
 	}
 }
 
@@ -70,7 +78,7 @@ p {
 		transparent 80%
 	);
 	padding: 2rem;
-	border-radius: 1rem;
+	border-radius: 1rem 1rem 0 0;
 
 	.drum-pad {
 		position: relative;
