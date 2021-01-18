@@ -26,6 +26,7 @@ p {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-size: 2.5rem;
+  transform: rotate(-10deg) skewX(-25deg);
 }
 
 #drum-machine {
@@ -74,7 +75,6 @@ p {
 }
 .drum-pad-container .drum-pad:hover, .drum-pad-container .drum-pad:focus {
   cursor: pointer;
-  transform: scale(1.08);
   border: 3px solid red;
 }
 .drum-pad-container .clip {
@@ -133,14 +133,27 @@ p {
 }
 
 @keyframes drumhead-animation {
-  25% {
+  10% {
     transform: scale(1.08);
     border: 3px solid red;
+  }
+  20% {
+    transform: scale(1);
+  }
+  30% {
+    transform: scale(0.92);
   }
   50% {
     transform: scale(1);
   }
-  75% {
+  70% {
+    transform: scale(1.08);
+    border: 3px solid red;
+  }
+  80% {
+    transform: scale(1);
+  }
+  90% {
     transform: scale(0.92);
   }
   100% {
